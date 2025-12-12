@@ -1,0 +1,10 @@
+{
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs && nitro build",
+    "preview": "npx srvx --prod .output/ --port 4000"
+  },
+  "devDependencies": {
+    "nitro": "latest"
+  }
+}
