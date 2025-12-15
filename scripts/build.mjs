@@ -55,7 +55,10 @@ namespaces.forEach((ns) => {
   LANGS.forEach((lng) => {
     const flat = {};
     Object.entries(merged).forEach(([key, value]) => {
-      if (value?.[lng] != null) flat[key] = value[lng];
+      const strippedKey = key.startsWith(`${ns}.`)
+        ? key.slice(ns.length + 1)
+        : key;
+      if (value?.[lng] != null) flat[strippedKey] = value[lng];
     });
 
     const outLngDir = path.join(OUT_DIR, lng);
