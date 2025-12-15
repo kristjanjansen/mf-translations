@@ -17,4 +17,4 @@ RUN npm run build
 EXPOSE 4000
 
 # Run npm run preview in the foreground
-CMD ["npm", "run", "preview", "--", "--port", "4000", "--host", "0.0.0.0"]
+CMD ["npm", "run", "preview"]
