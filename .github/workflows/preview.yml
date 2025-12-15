@@ -1,0 +1,12 @@
+name: Preview
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize, closed]
+
+jobs:
+  preview:
+    uses: kristjanjansen/mf-infra/.github/workflows/preview.yml@main
+    with:
+      service_name: mf-translations
+      port: 4000
