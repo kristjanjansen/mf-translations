@@ -1,0 +1,17 @@
+name: Release Preview
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Release version"
+        required: true
+        type: string
+
+jobs:
+  release_preview:
+    uses: kristjanjansen/mf-infra/.github/workflows/release-preview.yml@main
+    with:
+      service_name: mf-translations
+      port: "4000"
+      version: ${{ inputs.version }}

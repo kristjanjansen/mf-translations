@@ -1,4 +1,4 @@
-name: Preview
+name: PR Preview
 
 on:
   pull_request:
@@ -6,7 +6,7 @@ on:
 
 jobs:
   preview:
-    uses: kristjanjansen/mf-infra/.github/workflows/preview.yml@main
+    uses: kristjanjansen/mf-infra/.github/workflows/pr-preview.yml@main
     with:
       service_name: mf-translations
       port: 4000
